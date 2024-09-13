@@ -1,0 +1,236 @@
+body {
+    background-color: #dde5f4;
+    font-family: Arial, sans-serif;
+}
+.container2 {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 150px;
+}
+.responsive-table {
+    margin: auto;
+    margin-top: 8%;
+    width: 135%; 
+}
+.responsive-table {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #004274;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    text-align: left;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-row:nth-child(even) {
+    background-color: #f3f3f3;
+}
+
+.col {
+    flex: 1;
+    padding: 10px;
+    text-align: left;
+}
+
+.col-2 {
+    flex: 0 0 20%;
+}
+
+.col-3 {
+    flex: 0 0 75%;
+}
+
+.col-3 {
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+}
+
+@media (max-width: 768px) {
+    .table-header {
+        display: none;
+    }
+
+    .table-row {
+        display: block;
+        position: relative;
+        padding: 15px;
+    }
+
+    .col {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .col:before {
+        content: attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .col-2,
+    .col-3 {
+        width: 100%;
+    }
+}
+.button-24 {
+    position: absolute;
+    font-size: larger;
+    top: 130px;
+    left: -15px;
+    width: 100%;
+    height: 12%;
+    background-color: #66666621;
+    z-index: 1000;
+    white-space: nowrap;
+    box-shadow: 0px 0px 9px 0px rgb(8, 11, 57);
+    font-weight: 600;
+}
+
+:root {
+    --accent-color: #0b1c60;
+    --gradient-color: #57a6b7;
+}
+
+.button-24 {
+    background-color: #004274;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-align: center;
+    margin: 15px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-24:hover,
+.button-24:active {
+    color: #fff;
+    background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+}
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center; 
+    align-items: center;
+    z-index: 1001;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#overlay.show {
+    display: flex;
+    opacity: 1;
+}
+
+#form-container {
+    background: white;
+    box-shadow: 0 0 2em #e6e9f9;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 20px;
+    color: #4d4d4d;
+    width: 40%;
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 9px 0px rgb(8, 11, 57);
+    z-index: 1002;
+    position: relative;
+    animation: slide-down 0.5s ease;
+}
+
+#close-btn {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    background-color: red;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    color: #4d4d4d;
+}
+legend {
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+.button-25 {
+    padding: 1em;
+    background: #253297;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.button-25:hover {
+    background: linear-gradient(to left, var(--accent-color), var(--gradient-color));
+}
