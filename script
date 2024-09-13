@@ -1,0 +1,29 @@
+   <script>
+    function updateBackgroundColor(row) {
+        const dateDepot = row.getAttribute('data-date-depot');
+        const dateDepotObj = new Date(dateDepot);
+        const today = new Date();
+        const diffDays = Math.ceil((today - dateDepotObj) / (1000 * 60 * 60 * 24)); // Calculer en jours
+
+        const statutBtn = row.querySelector('.statut-btn');
+        const statut = statutBtn ? statutBtn.textContent.trim() : '';
+
+        if (diffDays > 21 && statut === 'Non Remboursé') { // Plus de 21 jours et non remboursé
+           
+        } else if (statut === 'Remboursé') { // Remboursé
+            row.classList.remove('non-rembourse');
+                        row.classList.add('rembourse');
+                        statutBtn.className = 'statut-btn button-3';
+                        statutBtn.disabled = true;
+                        statutBtn.textContent = 'Remboursé';
+        } else {
+            row.style.backgroundColor = 'white'; // Réinitialiser la couleur de fond
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.table-row').forEach(function(row) {
+            updateBackgroundColor(row); // Mise à jour initiale de la couleur de fond
+        });
+    });
+    </script>

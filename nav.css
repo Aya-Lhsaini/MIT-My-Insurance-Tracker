@@ -1,0 +1,163 @@
+nav {
+  padding: 20px;
+  margin-top: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #063356;
+  position: relative;
+  height: 70px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
+nav ul {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 550;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav ul li a:hover, nav ul li a:active {
+  background-color: transparent; 
+  color:  #57a6b7; 
+}
+
+.menu-icon {
+  display: none;
+}
+
+.menu-icon i {
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  nav ul {
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      text-align: center;
+      background: #004274;
+      gap: 0;
+      overflow: hidden;
+  }
+  nav ul li {
+      padding: 20px;
+      padding-top: 10px;
+  }
+  .menu-icon {
+      display: block;
+  }
+  #menuList {
+      transition: all 0.5s;
+  }
+}
+
+.animated-button {
+  font-weight: 400;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 30px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  background-color: white;
+  border-radius: 100px;
+  font-weight: 100;
+  color: #1f387e;
+  box-shadow: 0 0 0 2px #57a6b7;;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button a {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  align-items: center;
+}
+
+.animated-button svg {
+  position: absolute;
+  width: 20px;
+  fill: #1f387e;
+  z-index: 9;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .arr-1 {
+  right: 10px;
+}
+
+.animated-button .arr-2 {
+  left: -25%;
+}
+
+.animated-button .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #c5e5e4;
+  border-radius: 40%;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button .text {
+  color: #1f387e;
+  font-weight: 600;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  z-index: 1;
+  transform: translateX(-12px);
+  transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.animated-button:hover {
+  box-shadow: 0 0 0 12px transparent;
+  color:  #57a6b7;;
+  border-radius: 12px;
+}
+
+.animated-button:hover .arr-1 {
+  right: -25%;
+}
+
+.animated-button:hover .arr-2 {
+  left: 16px;
+}
+
+.animated-button:hover .text {
+  transform: translateX(12px);
+}
+
+.animated-button:hover svg {
+  fill: #1f387e;
+}
